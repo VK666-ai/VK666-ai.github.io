@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+    <style>
+        .form-control me-2 {
+          display: flex;
+          justify-content: flex-end;
+        }
+        .btn btn-outline-success {
+          display: flex;
+          justify-content: flex-end;
+        }
+        .navbar-brand {
+          margin-right: auto;
+        }
+      </style>
 </head>
 <body>
-    傻逼吴盛阳
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" >快乐运算:)</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="email" placeholder="email" aria-label="email">
+            <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
+            <button class="btn btn-outline-success" type="submit" style="background-color: green;">Sign in</button>
+            <button class="btn btn-outline-success" type="submit" style="background-color: red;">Sign up</button>
+          </form>
+        </div>
+      </nav>
+    <div class="p-5 mb-4 bg-light header">
+        <div class="container-fluid py-5 row">
+          <div class="left col-md-10">
+            <h1 class="display-5 fw-bold">欢迎来到快乐运算~</h1>
+            <p class="">在这里你将攻克各个难题，和不同的人面对难易相近的难题。希望你能披荆斩棘，走向人生巅峰。</p>
+            <p class="fs-4" style="margin: 0"><strong>你可以：</strong> <small>独自通关</small></p>
+            <p class="fs-4" style="margin-left: 60px;"><small>线上对战</small></p>
+            <button class="btn btn-primary btn-lg" type="button">详细信息 >></button>
+          </div>
+          <div class="right col-md-2" >
+            <div class="thumbnail">
+              <img src="https://yanyige.github.io/CourseWork/Week6/images/logo.jpg" class="thumbnail">
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
