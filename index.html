@@ -4,23 +4,74 @@
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
     <style>
-        .form-control me-2 {
-          display: flex;
-          justify-content: flex-end;
-        }
-        .btn btn-outline-success {
+        .navbar {
           display: flex;
           justify-content: flex-end;
         }
         .navbar-brand {
           margin-right: auto;
         }
+        .header {
+          background-color: rgb(48, 49, 51) !important;
+          color: white;
+          padding: 3rem 8rem!important;
+        }
+        .header h1 {
+          font-size: 24px;
+        }
+        .header p {
+          font-size: 21px !important;
+        }
+        .header p strong {
+          font-size: 14px;
+        }
+        .header p small {
+          font-size: 65%;
+        }
+        .header button {
+          width: 83px;
+          font-size: 12px;
+          padding: 2px 0;
+          margin: 0;
+        }
+        .header img{
+          height: 200px;
+        }
+        .header .thumbnail {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          width: 159px;
+          padding: 4px;
+          float:right;
+        }
+        .content {
+        /* margin: 0; */
+        /* padding 一个值代表上下左右 */
+        /* padding 两个值代表上下，左右 */
+        /* padding 四个值代表上、右、下、左 */
+        padding: 10px 100px; 
+        }
+        .content .my-btn {
+          width: 100%;
+        }
+        .content .my-btn:hover {
+          background-color: orange;
+        }
+        .content .my-btn button{
+          width: 100%;
+        }
+        .content .my-btn ul{
+          width: 100%;
+          opacity: 0.8;
+        }
+        .content .row>div {
+          padding: 10px;
+        }
       </style>
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" >快乐运算:)</a>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="email" placeholder="email" aria-label="email">
             <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
@@ -42,6 +93,66 @@
             <div class="thumbnail">
               <img src="https://yanyige.github.io/CourseWork/Week6/images/logo.jpg" class="thumbnail">
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="content" style="height: 350px; background-color: black; color:white">
+        <div class="row g-2">
+          <div class="col-md-5" style="height: 350px;">
+            <span>小试牛刀</span>
+            <!-- Default dropup button -->
+            <div class="btn-group dropup my-btn" style="display: block;">
+              <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                选择难度
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">白银</a></li>
+                <li><a class="dropdown-item" href="#">青铜</a></li>
+                <li><a class="dropdown-item" href="#">王者</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-7" style="height: 350px;">榜上有名
+            <table id="ans-table" class="table" style="width: calc(100% - 110px)">
+              <thead>
+                <tr>
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Score</th>
+                        <th>Rank</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>彭阳</td>
+                      <td>0</td>
+                      <td>0</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">2</th>
+                      <td>吴军</td>
+                      <td>0</td>
+                      <td>0</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">3</th>
+                      <td>高鑫</td>
+                      <td>0</td>
+                      <td>0</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">4</th>
+                      <td>包玲玲</td>
+                      <td>0</td>
+                      <td>0</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">5</th>
+                      <td>严一格</td>
+                      <td>0</td>
+                      <td>0</td>
+                  </tr>
+        </table>
           </div>
         </div>
       </div>
