@@ -11,7 +11,7 @@ function login() {
     ele = document.querySelector("#password");
     var input_password = ele.value;
     //判断用户是否存在
-    if (user_list.ibdexOf(input_username) != -1){
+    if (user_list.indexOf(input_username) != -1){
         index = user_list.indexOf(input_username);
         var target_password = password_list[index];
         if (input_password == target_password) {
