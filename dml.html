@@ -299,8 +299,9 @@
   if (username != null && username.length > 0) {
     // 获得登录的按钮们
     var btns = document.querySelector(".login_form");
-    for (var i = 0; i < btns.length; i ++) {
-      btns[i].style.display = 'none';
+    btns = Array.from(document.querySelector('.dropdown-menu').querySelectorAll('li'));
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', showQuiz);
     }
 
     document.querySelector('.logout').style.display = 'block';
@@ -367,19 +368,22 @@
     node.style.display = 'block';
   }
   //生成题目
-  function generateQuiz() {
-    quiz=[];
-    for (var i = 0; i < 5; i ++) {
-      if (i % 2 == 0) {
-        quiz.push(Math.round(Math.random() * 50));
-      }else{
-        quiz.push(generateQuiz());
-      }
+  function generateQuiz(depth) {
+    quiz = [];
+    for (var i = 0; i < 5; i++) {
+        if (i % 2 == 0) {
+            quiz.push(Math.round(Math.random() * 50));
+        } else {
+                quiz.push(generateOp());
+        }
     }
     return quiz.join('');
-  }
+}
+
+// 调用generateQuiz()函数并传入递归深度
+generateQuiz(2);
   //生成字符
-  function generateOp(){
+  function generateOp() {
     ops = ['+','-','*','/'];
     return ops[Math.floor(Math.random() * 4)];
   }
@@ -390,4 +394,3 @@
   }
 </script>
 </html>
-
